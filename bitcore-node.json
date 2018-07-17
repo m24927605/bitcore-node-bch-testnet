@@ -1,0 +1,47 @@
+{
+    "network": "testnet",
+    "port": 3001,
+    "datadir": "/home/dali17/bch_data",
+    "services": [
+      "p2p",
+      "db",
+      "header",
+      "block",
+      "mempool",
+      "address",
+      "transaction",
+      "timestamp",
+      "fee",
+      "insight-api",
+      "web"
+    ],
+    "servicesConfig": {
+      "insight-api": {
+        "disableRateLimiter": true,
+        "enableCache": true
+      },
+      "p2p": {
+        "peers": [
+          {
+            "ip": {
+              "v4": "127.0.0.1"
+            },
+            "port": 18333
+          }
+        ]
+      },
+      "fee": {
+        "rpc": {
+          "user": "bchcoolbitxbch",
+          "pass": "coolbitxbchcoolbitx",
+          "host": "localhost",
+          "protocol": "http",
+          "port": 18332,
+          "zmqpubrawtx":"tcp://127.0.0.1:28332",
+          "zmqpubhashtx":"tcp://127.0.0.1:28333",
+          "zmqpubhashblock":"tcp://127.0.0.1:28334",
+          "zmqpubrawblock":"tcp://127.0.0.1:28335"
+        }
+      }
+    }
+  }
